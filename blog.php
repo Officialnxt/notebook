@@ -9,23 +9,23 @@ $numrows = mysql_num_rows($sql);
 //Check if there is atleast 1 post
 if($numrows >= 1){
 //while loop for posts
-while($row = mysql_fetch_assoc($sql)){
+  while($row = mysql_fetch_assoc($sql)){
 
-$id = $row['id'];
-$title = $row['title'];
-$text = nl2br($row['text']);
-$tags = $row['tags'];
-$date = $row['date'];
+		$id = $row['id'];
+		$title = $row['title'];
+		$text = nl2br($row['text']);
+		$tags = $row['tags'];
+		$date = $row['date'];
 
-echo "<a href='/$id'>$title</a><br />";
-echo "$text<br >";
-echo "$tags<br />";
-echo "$date<hr />";
+		echo "<a href='/$id'>$title</a><br />";
+		echo "$text<br >";
+		echo "$tags<br />";
+		echo "$date<hr />";
 
-}
+	}
 
 }
 else
-  echo "There are currently no posts.";
+	echo "There are currently no posts.";
 
 ?>
